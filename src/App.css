@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+img {
+  width: 80%;
+}
+
 .container {
   display: flex;
 }
@@ -9,9 +13,11 @@
 .item {
   flex: 1;
   padding: 30px;
-  border: 1px solid black;
+  border: 1px none black;
   position: relative;
   overflow: hidden;
+  width: 75%;
+  height: 250px;
 }
 
 .overlay {
