@@ -1,10 +1,31 @@
-import React from 'react';
+
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Details() {
-  return (
-    <div>
-      <Link to='/'>Back to Home</Link> 
-    </div>
-  )
+export default class Details extends Component {
+
+  constructor() {
+    super();
+    this.state= {
+      welcomeMessage: 'welcome'
+    };
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        welcomeMessage: 'soon'
+      });
+    }, 3000);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1> {this.state.welcomeMessage}</h1>
+        <Link to='/'>Back to Home</Link>
+      </div>
+    );
+  }
 }
+
