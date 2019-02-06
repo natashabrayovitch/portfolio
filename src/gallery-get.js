@@ -1,10 +1,10 @@
 
-import who from './who.jpg';
-import what from './what.jpg';
-import proj from './proj.jpg';
-import amb from './amb.jpg';
-import testimonials from './testimonials.jpg';
-import contact from './contact.jpg';
+import who from './Images/who.jpg';
+import what from './Images/what.jpg';
+import proj from './Images/proj.jpg';
+import amb from './Images/amb.jpg';
+import testimonials from './Images/testimonials.jpg';
+import contact from './Images/contact.jpg';
 
 export default function getGallery() {
     return [

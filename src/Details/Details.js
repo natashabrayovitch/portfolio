@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import getGallery from './gallery-get';
-
+import getGallery from '../gallery-get';
+import './Details.css';
 export default class Details extends Component {
 
   constructor() {
@@ -24,12 +24,16 @@ export default class Details extends Component {
       return <Redirect to='not-found' />;
     } else {
       return (
-        <div>
+        <div className='Details'>
           <h1>{this.state.gallery.name}</h1>
-          <div>{this.state.gallery.details}</div>
-          <img 
-            src={this.state.gallery.logo}
-            alt={this.state.gallery.name} />
+          <div className='content'>
+            <div className='text'>
+              {this.state.gallery.details}</div>
+            <img
+            className='image'
+              src={this.state.gallery.logo}
+              alt={this.state.gallery.name} />
+          </div>
           <Link to='/'>Back to Home</Link>
         </div>
       );
