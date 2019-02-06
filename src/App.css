@@ -7,32 +7,35 @@ img {
 }
 
 .container {
-  display: flex;
+/*  display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .item {
-  flex: 1;
+  /* flex: 1;
+  flex-basis: 120px; */
   padding: 30px;
   border: 1px none black;
   position: relative;
   overflow: hidden;
-  width: 75%;
-  height: 250px;
+  
 }
 
 .overlay {
   transition: bottom ease 1s;
-  display: none;
+  
   position: absolute;
   bottom: -100px;
-  bottom: 0;
+  
   left: 0;
   opacity: 0.6;
   width: 100%;
 }
 
 .item:hover .overlay {
-  display: block;
+  
   opacity: .6;
   bottom: 0;
 }
@@ -63,10 +66,5 @@ img {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-@media only screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
   }
 }

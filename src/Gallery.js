@@ -14,10 +14,10 @@ export default function Gallery() {
   return (
     <div>
       <div>
-      <Stack id='logo' name='This is me ' logo={logo} />
+      <Stack id='logo' name=' ' logo={logo} />
       </div>
       <div className='container'>
-        <Stack id='who' name='Who' logo={who} />
+        <Stack id='who' name='Who is Natasha' logo={who} />
         <Stack id='what' name='About me' logo={what} />
         <Stack id='proj' name='Current projects' logo={proj} />
         <Stack id='amb' name='Why Kodiri' logo={amb} />
