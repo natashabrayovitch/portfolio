@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Gallery from './Gallery';
 import Details from './Details/Details';
 import NotFound from './NotFound';
@@ -9,7 +9,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <HashRouter>
         <div>
           <div className="App">
             <Switch>
@@ -19,7 +19,7 @@ class App extends Component {
             </Switch>
           </div>
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }
