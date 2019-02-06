@@ -1,4 +1,4 @@
-import React from 'react';
+
 import who from './who.jpg';
 import what from './what.jpg';
 import proj from './proj.jpg';

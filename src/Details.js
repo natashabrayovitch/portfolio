@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import getGallery from './gallery-get';
 
 export default class Details extends Component {
 
@@ -12,17 +13,18 @@ export default class Details extends Component {
   }
 
   componentDidMount(){
-    setTimeout(() => {
+    let galleryId = this.props.match.params.galleryId;
+    let gallery = getGallery()
+        .find((gallery) => gallery.id === galleryId);
       this.setState({
-        welcomeMessage: 'soon'
-      });
-    }, 3000);
+        gallery
+    });
   }
 
   render() {
     return (
       <div>
-        <h1> {this.state.welcomeMessage}</h1>
+        <h1> {this.state.gallery.name}</h1>
         <Link to='/'>Back to Home</Link>
       </div>
     );
